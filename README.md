@@ -38,3 +38,17 @@ dq.pop()
 # Remove elements from the left
 dq.popleft()  
 ```
+
+## set
+
+- issubset() method returns True if set A is the subset of B
+
+```python
+A = {1, 2, 3}
+B = {1, 2, 3, 4, 5}
+
+# all items of A are present in B
+print(A.issubset(B))
+
+# Output: True
+```
