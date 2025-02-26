@@ -1,5 +1,14 @@
 # interview_prep_py
 
+# for
+```python
+for k in f:
+  if f[k] > char_freq[k]:
+    break
+else:
+  # executes if break was NOT called
+  result += len(w)
+
 # Collections
 
 ## defaultdict
