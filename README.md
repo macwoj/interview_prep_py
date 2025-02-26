@@ -8,6 +8,7 @@ for k in f:
 else:
   # executes if break was NOT called
   result += len(w)
+```
 
 # Collections
 
