@@ -1,5 +1,12 @@
 # interview_prep_py
 
+# class
+```python
+class ClassName:
+    def __init__(self, parameters):
+        self.attribute = value
+```
+
 # for
 ```python
 for k in f:
