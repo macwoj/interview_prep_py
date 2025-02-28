@@ -49,7 +49,7 @@ dq.pop()
 dq.popleft()  
 ```
 
-## set
+## set, hashtable
 
 - issubset() method returns True if set A is the subset of B
 
@@ -61,4 +61,22 @@ B = {1, 2, 3, 4, 5}
 print(A.issubset(B))
 
 # Output: True
+```
+
+## defaultdict, O(1)
+```python
+from collections import OrderedDict
+
+my_dict = OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+
+# Move key 'a' to the end
+my_dict.move_to_end('a')
+
+# Move key 'b' to the beginning
+my_dict.move_to_end('b', last=False)
+
+last_item = my_dict.popitem(last=True)
+
+for key, value in od.items():
+    print(key, value)
 ```
