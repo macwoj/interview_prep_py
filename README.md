@@ -35,6 +35,16 @@ print(my_list[-3:-1])  # Output: [7, 8]
 print(my_list[::-1]) # Output: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 ```
 
+## stack
+```python
+stack = []
+
+# add to back
+stack.append('a')
+
+# remove and return form back
+stack.pop()
+```
 
 ## defaultdict
 ``` python
