@@ -16,6 +16,12 @@ else:
   # executes if break was NOT called
   result += len(w)
 ```
+```python
+# reverse range
+count = [0, 1, 2, 3, 4, 5]
+for c in range(len(count)-1, -1, -1):
+    print(count[c])
+```
 
 # Collections
 
