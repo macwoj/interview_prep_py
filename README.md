@@ -48,6 +48,19 @@ print(my_list[-3:-1])  # Output: [7, 8]
 print(my_list[::-1]) # Output: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 ```
 
+### sort
+```python
+numbers = [5, 2, 9, 1]
+numbers.sort(key=lambda x: -x)  # Sort descending using key
+print(numbers)  # [9, 5, 2, 1]
+```
+
+```python
+pairs = [(1, 3), (2, 2), (3, 1)]
+sorted_pairs = sorted(pairs, key=lambda x: x[1])
+print(sorted_pairs)  # [(3, 1), (2, 2), (1, 3)]
+```
+
 ## stack
 ```python
 stack = []
