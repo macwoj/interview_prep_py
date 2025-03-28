@@ -145,18 +145,18 @@ for key, value in od.items():
 
 # Binary search
 ```python
+# lower bound
 def binary_search(arr, target):
     left, right = 0, len(arr) - 1
 
     while left <= right:
-        mid = (left + right) // 2
+        mid = left + (right - left) // 2
         if arr[mid] == target:
             return mid
         elif arr[mid] < target:
             left = mid + 1
         else:
             right = mid - 1
-
     return -1
 ```
 
@@ -164,7 +164,7 @@ def binary_search(arr, target):
 def binary_search_insertion_index(arr, target):
     left, right = 0, len(arr)
     while left < right:
-        mid = (left + right) // 2
+        mid = left + (right - left) // 2
         if arr[mid] < target:
             left = mid + 1
         else:
