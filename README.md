@@ -141,6 +141,28 @@ for key, value in od.items():
     print(key, value)
 ```
 
+## heap
+```python
+import heapq
+
+# Create a heap from a list
+heap = [5, 3, 8, 1, 2]
+heapq.heapify(heap)
+print(heap)  # Now it's a valid heap (min-heap)
+
+# Add an element
+heapq.heappush(heap, 0)
+print(heap)
+
+# Remove and return the smallest element
+smallest = heapq.heappop(heap)
+print(smallest)
+print(heap)
+
+# Peek at the smallest element without popping
+print(heap[0])
+```
+
 # Algorithms
 
 ## Binary search
