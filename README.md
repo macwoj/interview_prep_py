@@ -141,7 +141,7 @@ for key, value in od.items():
     print(key, value)
 ```
 
-## heap
+## heap (min heap)
 ```python
 import heapq
 
