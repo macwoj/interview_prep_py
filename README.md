@@ -147,19 +147,23 @@ import heapq
 
 # Create a heap from a list
 heap = [5, 3, 8, 1, 2]
+# O(n)
 heapq.heapify(heap)
 print(heap)  # Now it's a valid heap (min-heap)
 
 # Add an element
+# O(log n)
 heapq.heappush(heap, 0)
 print(heap)
 
 # Remove and return the smallest element
+# O(log n)
 smallest = heapq.heappop(heap)
 print(smallest)
 print(heap)
 
 # Peek at the smallest element without popping
+# O(1)
 print(heap[0])
 ```
 
