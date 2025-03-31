@@ -1,5 +1,17 @@
 # interview_prep_py
 
+# string
+```python
+"hello123".isalnum()    # True
+"hello 123".isalnum()   # False (space)
+"123!".isalnum()        # False (!)
+"".isalnum()            # False (empty string)
+
+s.isalpha() # only letters
+s.isdigit() # only digits
+s.isnumeric() # numeric (including Unicode numerals)
+```
+
 # class
 ```python
 class ClassName:
