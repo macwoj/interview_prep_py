@@ -83,8 +83,9 @@ stack.append('a')
 # remove and return form back
 stack.pop()
 ```
+## dict open addressing with quadratic probing
 
-## defaultdict
+### defaultdict
 ``` python
 from collections import defaultdict
 
@@ -100,6 +101,37 @@ print(d)
 # No key error raised here and an empty list
 # is printed
 print(d['juices'])
+```
+
+```python
+from collections import OrderedDict
+
+my_dict = OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+
+# Move key 'a' to the end
+my_dict.move_to_end('a')
+
+# Move key 'b' to the beginning
+my_dict.move_to_end('b', last=False)
+
+last_item = my_dict.popitem(last=True)
+
+for key, value in od.items():
+    print(key, value)
+```
+
+### set, hashtable
+
+- issubset() method returns True if set A is the subset of B
+
+```python
+A = {1, 2, 3}
+B = {1, 2, 3, 4, 5}
+
+# all items of A are present in B
+print(A.issubset(B))
+
+# Output: True
 ```
 
 ## deque
@@ -119,38 +151,6 @@ dq.pop()
 
 # Remove elements from the left
 dq.popleft()  
-```
-
-## set, hashtable
-
-- issubset() method returns True if set A is the subset of B
-
-```python
-A = {1, 2, 3}
-B = {1, 2, 3, 4, 5}
-
-# all items of A are present in B
-print(A.issubset(B))
-
-# Output: True
-```
-
-## defaultdict, O(1)
-```python
-from collections import OrderedDict
-
-my_dict = OrderedDict([('a', 1), ('b', 2), ('c', 3)])
-
-# Move key 'a' to the end
-my_dict.move_to_end('a')
-
-# Move key 'b' to the beginning
-my_dict.move_to_end('b', last=False)
-
-last_item = my_dict.popitem(last=True)
-
-for key, value in od.items():
-    print(key, value)
 ```
 
 ## heap (min heap)
