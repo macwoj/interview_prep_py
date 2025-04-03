@@ -1,4 +1,5 @@
 
+# Leetcode 227
 def caculator(s):
     prev = 0
     curr = 0
@@ -23,6 +24,7 @@ def caculator(s):
             op = c
     return result + prev
 
+# variant no - and /
 def caculator2(s):
     prev = 0
     curr = 0
