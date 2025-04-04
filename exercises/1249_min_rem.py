@@ -1,7 +1,7 @@
 
 from collections import defaultdict
 
-
+# On space On
 def minRemoveToMakeValid(s: str) -> str:
     balance=0
     total=0
@@ -28,7 +28,7 @@ def minRemoveToMakeValid(s: str) -> str:
             result.append(c)
     return ''.join(result)
 
-#variant: inplace
+#variant: inplace, On space O1
 def minRemoveToMakeValid2(s: str) -> str:
     s=list(s)
     balance=0
@@ -63,6 +63,7 @@ def minRemoveToMakeValid2(s: str) -> str:
     return ''.join(s[:j])
 
 # more braces () [] {}
+# On space On
 def minRemoveToMakeValid3(s: str) -> str:
     s=list(s)
     balance = defaultdict(int)
