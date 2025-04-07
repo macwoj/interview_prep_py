@@ -51,7 +51,6 @@ class SparseVector2:
 
     # Return the dotProduct of two sparse vectors
     def dotProduct(self, vec: 'SparseVector2') -> int:
-        i = j = 0
         result =0
         if len(vec.vect) < len(self.vect):
             for v in vec.vect:
