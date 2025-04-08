@@ -1,5 +1,8 @@
 # interview_prep_py
 
+# variants
+- [Random Pick Index](./exercises/398_rand_pick.py)
+
 # string
 ```python
 "hello123".isalnum()    # True
