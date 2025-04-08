@@ -2,6 +2,7 @@
 
 # variants
 - [Random Pick Index](./exercises/398_rand_pick.py)
+- [Range Sum of BST](./exercises/938_range_bst.py)
 
 # string
 ```python
