@@ -4,6 +4,7 @@
 - [Random Pick Index](./exercises/398_rand_pick.py)
 - [Range Sum of BST](./exercises/938_range_bst.py)
 - [Max swap](./exercises/670_max_swap.py)
+- [Accounts merge](./exercises/721_accouts_merge.py)
 
 # string
 ```python
