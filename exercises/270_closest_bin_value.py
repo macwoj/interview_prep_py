@@ -25,4 +25,4 @@ def closestValue(self, root: Optional[TreeNode], target: float) -> int:
 
     return result
 
-#variant: target is int
+#variant: target is int, same impl
