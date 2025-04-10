@@ -8,6 +8,7 @@
 - [Accounts merge](./exercises/721_accouts_merge.py)
 - [Calculator](./exercises/227_calculator.py)
 - [BST range sum](./exercises/938_range_bst.py)
+- [Next Perm](./exercises/31_next_perm.py)
 
 # string
 ```python
