@@ -9,6 +9,7 @@
 - [Calculator](./exercises/227_calculator.py)
 - [BST range sum](./exercises/938_range_bst.py)
 - [Next Perm](./exercises/31_next_perm.py)
+- [First last element](./exercises/34_first_last_sorted.py)
 
 # string
 ```python
