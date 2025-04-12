@@ -20,7 +20,7 @@ class Solution:
 class Solution2:
     def findMissingRanges(self, nums: List[int], lower: int, upper: int) -> List[List[int]]:
         result = []
-        nums.append(upper+1) ## HERE
+        nums.append(upper+1) ## HERE, add the upper to the list so we dont need many ifs
         curr = lower
         for n in nums:
             if n-curr>2:

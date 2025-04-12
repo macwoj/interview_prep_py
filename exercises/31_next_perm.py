@@ -2,7 +2,8 @@
 # On space: O1
 from typing import List
 
-def nextPermutation(self, nums: List[int]) -> None:
+# find first decreasing element i, swap with first greater from right, reverse i+1
+def nextPermutation(nums: List[int]) -> None:
     """
     Do not return anything, modify nums in-place instead.
     """
@@ -25,10 +26,11 @@ def nextPermutation(self, nums: List[int]) -> None:
         nums[left],nums[right]=nums[right],nums[left]
         left+=1
         right-=1
+    return nums
 
 #variant: prev permutation
 # On space: O1
-def nextPermutation2(self, nums: List[int]) -> None:
+def nextPermutation2(nums: List[int]) -> None:
     """
     Do not return anything, modify nums in-place instead.
     """
@@ -51,3 +53,7 @@ def nextPermutation2(self, nums: List[int]) -> None:
         nums[left],nums[right]=nums[right],nums[left]
         left+=1
         right-=1
+    return nums
+
+print(nextPermutation([9, 4, 8, 3, 5, 5, 4, 3]))
+print(nextPermutation2([9, 4, 8, 3, 5, 5, 6, 6]))

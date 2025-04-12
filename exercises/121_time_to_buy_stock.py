@@ -18,7 +18,7 @@ def minCost(departures,returns):
     if not departures or not returns or len(returns) < 2 or len(departures) != len(returns):
         return -1
     dep_cost = departures[0]
-    ret_cost = returns[1]
+    ret_cost = returns[1]  ## HERE, need to be in the future
     result = dep_cost+ret_cost
     for i in range(2,len(departures)):
         ret_cost=min(ret_cost,returns[i])

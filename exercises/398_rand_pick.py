@@ -24,7 +24,7 @@ class Solution:
 def sample(nums,k):
     result = nums[:k]
     for i in range(k,len(nums)):
-        n = random.randint(0,i) # o and i inclusive
+        n = random.randint(0,i) # 0 and i inclusive
         # print(f'{i} {n}')
         if n < k:
             result[n]=nums[i]
