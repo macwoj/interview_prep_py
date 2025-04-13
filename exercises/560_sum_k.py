@@ -32,6 +32,7 @@ print(subarraySum2([1,1,1],2))#True
 print(subarraySum2([1,4,7],3)) #False
 
 #variant: only + numbers, return True/False
+# move right and of sum>k move left to bring it down
 def subarraySum3(nums: List[int], k: int) -> int:
     left=0
     total=0
