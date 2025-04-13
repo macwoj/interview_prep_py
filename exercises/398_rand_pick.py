@@ -21,7 +21,7 @@ class Solution:
 # reservoir sampling
 # On space O1
 
-def sample(nums,k):
+def sample2(nums,k):
     result = nums[:k]
     for i in range(k,len(nums)):
         n = random.randint(0,i) # 0 and i inclusive
@@ -30,7 +30,7 @@ def sample(nums,k):
             result[n]=nums[i]
     return result
 
-print(sample([6,8,2,1,3,10,4],3))
+print(sample2([6,8,2,1,3,10,4],3))
 
 # variant: rand output index of max, On space O1
 

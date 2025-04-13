@@ -43,7 +43,7 @@ class Solution2:
             mid = lo + (hi-lo)//2
             if nums[mid] < target:
                 lo = mid + 1
-            else:
+            else: #equal push to left
                 hi = mid - 1
         return lo
     def binUpper(self,nums,target):
@@ -51,7 +51,7 @@ class Solution2:
         hi = len(nums) - 1
         while lo <= hi:
             mid = lo + (hi-lo)//2
-            if nums[mid] <= target:
+            if nums[mid] <= target: #equal push to right
                 lo = mid + 1
             else:
                 hi = mid - 1

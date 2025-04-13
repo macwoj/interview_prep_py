@@ -41,7 +41,7 @@ def accountsMerge2(accounts):
     visited=set()
     result =defaultdict(list)
     def dfs(email,name):
-        nonlocal email_id,visited,result
+        nonlocal email_id,visited,adj
         visited.add(email)
         email_id[email] = name
         for n in adj[email]:
