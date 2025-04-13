@@ -57,6 +57,7 @@ class Solution:
                 self.prefix.append(node.vals)
             else:
                 self.prefix.append(node.vals+self.prefix[-1])
+            inorder(node.right)
         inorder(root)
     def leftBound(self,lower):
         lo=0

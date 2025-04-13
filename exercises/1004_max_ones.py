@@ -28,7 +28,7 @@ def vacation(days,pto):
     for i,v in enumerate(days):
         if v=='W':
             pto-=1
-        while pto<0:
+        while j<i and pto<0:
             if (days[j]=='W'):
                 pto+=1
             j+=1
@@ -47,7 +47,7 @@ def vacation(year,pto):
     for i,v in enumerate(year):
         if not v:
             pto-=1
-        while pto<0:
+        while j<i and pto<0:
             if (not year[j]):
                 pto+=1
             j+=1

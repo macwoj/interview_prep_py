@@ -7,7 +7,7 @@ from typing import List
 class Solution:
     def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
         n = len(grid)
-        if not grid or grid[0][0] == 1 or grid[-1][-1]:
+        if not grid or grid[0][0] == 1 or grid[-1][-1] == 1:
             return -1
         q = deque([(1,0,0)])
         dirs = [(1,1),(-1,-1),(-1,1),(1,-1),(1,0),(0,1),(-1,0),(0,-1)]

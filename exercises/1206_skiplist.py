@@ -12,8 +12,7 @@ class Skiplist:
 
     def __init__(self):
         self.max_level = 3
-        self.head = None
-        self.levels = [None]*self.max_level
+        self.levels = []
     def print(self):
         for i,head in enumerate(self.levels):
             node = head
