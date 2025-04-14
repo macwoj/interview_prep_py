@@ -16,11 +16,11 @@ def nextPermutation(nums: List[int]) -> None:
         nums.reverse()
         return
     next=len(nums)-1
-    while nums[next]<=nums[valley]:
+    while nums[next]<=nums[valley]: #find max
         next-=1
     nums[next],nums[valley]=nums[valley],nums[next]
 
-    left = valley+1
+    left = valley+1 #swap after valley
     right=len(nums)-1
     while left<right:
         nums[left],nums[right]=nums[right],nums[left]

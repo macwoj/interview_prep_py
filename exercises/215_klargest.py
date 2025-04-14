@@ -26,7 +26,7 @@ def findKthLargest2(nums: List[int], k: int) -> int:
 
 #variant: k smallest
 # Onlogk space Ok
-def findKthLargest(nums: List[int], k: int) -> int:
+def findKthSmallest(nums: List[int], k: int) -> int:
     h=[]
     for n in nums:
         heapq.heappush(h,-n)
