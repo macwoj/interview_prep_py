@@ -212,13 +212,13 @@ def binary_search(arr, target):
 
 ```python
 def binary_search_insertion_index(arr, target):
-    left, right = 0, len(arr)
-    while left < right:
+    left, right = 0, len(arr)-1
+    while left <= right:
         mid = left + (right - left) // 2
         if arr[mid] < target:
             left = mid + 1
         else:
-            right = mid
+            right = mid -1
     return left  # Insertion index
 ```
 
