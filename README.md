@@ -212,13 +212,13 @@ def binary_search(arr, target):
 
 ```python
 def binary_search_insertion_index(arr, target):
-    left, right = 0, len(arr)
-    while left < right:
+    left, right = 0, len(arr)-1
+    while left <= right:
         mid = left + (right - left) // 2
         if arr[mid] < target:
             left = mid + 1
         else:
-            right = mid
+            right = mid -1
     return left  # Insertion index
 ```
 
@@ -243,4 +243,62 @@ class LRUCache:
         self.dic[key] = value
         if len(self.dic) > self.capacity:
             self.dic.popitem(False)
+```
+
+# file manipulation
+
+### 1. **Read from a File**
+```python
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+```
+### 2. **Write to a File (Overwrite)**
+```python
+with open('example.txt', 'w') as file:
+    file.write("Hello, World!\n")
+```
+### 3. **Append to a File**
+```python
+with open('example.txt', 'a') as file:
+    file.write("Appended line.\n")
+```
+### 4. **Read File Line by Line**
+```python
+with open('example.txt', 'r') as file:
+    for line in file:
+        print(line.strip())
+```
+### 🗃️ 5. **Copy a File**
+```python
+import shutil
+
+shutil.copy('example.txt', 'copy_example.txt')
+```
+### 6. **Rename or Move a File**
+```python
+import os
+
+os.rename('copy_example.txt', 'renamed_example.txt')
+```
+### 7. **Delete a File**
+```python
+import os
+
+if os.path.exists('renamed_example.txt'):
+    os.remove('renamed_example.txt')
+```
+### 8. **List Files in a Directory**
+```python
+import os
+
+for filename in os.listdir('.'):
+    print(filename)
+```
+### 9. **Check if File Exists**
+```python
+import os
+
+if os.path.isfile('example.txt'):
+    print("File exists.")
 ```
