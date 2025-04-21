@@ -195,32 +195,26 @@ print(heap[0])
 
 ## Binary search
 ```python
-# lower bound
+
 def binary_search(arr, target):
-    left, right = 0, len(arr) - 1
+    lo, hi = 0, len(arr) - 1
 
-    while left <= right:
-        mid = left + (right - left) // 2
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] < target:
-            left = mid + 1
+    while lo<=hi:
+        mid=lo+(hi-lo)//2
+        if arr[mid]<=target:
+            lo=mid+1
         else:
-            right = mid - 1
-    return -1
+            hi=mid-1
+    return lo
 ```
 
-```python
-def binary_search_insertion_index(arr, target):
-    left, right = 0, len(arr)-1
-    while left <= right:
-        mid = left + (right - left) // 2
-        if arr[mid] < target:
-            left = mid + 1
-        else:
-            right = mid -1
-    return left  # Insertion index
-```
+- `binary_search([1,2,3,4],5)` -> 4 (one past the last element)
+- `binary_search([1,2,3,4],0)` -> 0
+- `binary_search([1, 2, 6, 7],5)` -> 2
+- `binary_search([1, 2, 6, 7],3)` -> 2
+- `binary_search([1, 2, 6, 7],2)` -> 2
+- `binary_search([1, 2, 6, 7, 7, 7, 7, 8, 9, 10, 11],7)` -> 7
+
 
 ## LRU Cache
 ```python
