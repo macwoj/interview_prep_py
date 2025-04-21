@@ -20,7 +20,7 @@ def simplifyPath(path: str) -> str:
 def simplifyPath2(cwd,cd) -> str:
     if not cd:
         return cwd
-    if cd[0] =='/':
+    if cd[0] =='/':  ##HERE
         cwd=''
     sta = cwd.split('/')[1:]
     toks = cd.split('/')

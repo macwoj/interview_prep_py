@@ -48,7 +48,7 @@ def vacation(year,pto):
         if not v:
             pto-=1
         while j<i and pto<0:
-            if (not year[j]):
+            if not year[j]:
                 pto+=1
             j+=1
         result = max(result,i-j+1)

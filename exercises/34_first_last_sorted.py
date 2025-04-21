@@ -68,6 +68,7 @@ class Solution2:
     
 #variant: find count of unique elements
 # Oklogn k number of unique numbers
+# right side bin search n[mid]<=target
 class Solution3:
     def countUnique(self,nums):
         result=0

@@ -2,25 +2,45 @@ from collections import Counter
 import random
 
 
-class Solution:
-    def __init__(self,cities):
-        self.cities = cities
-        self.sum = []
-        s=0
-        for city,pop in cities:
-            s+=pop
-            self.sum.append(s)
 
-    def pickIndex(self):
-        target = random.random()*self.sum[-1]
-        lo,hi=0,len(self.sum)-1
-        while lo<=hi:
-            mid=lo+(hi-lo)//2
-            if self.sum[mid]<target:
-                lo=mid+1
+
+
+def findTarget(s,target):
+    result=[]
+    def dfs(s,i,solution,solSum,target):
+        nonlocal result
+        if i==len(s):
+            if target == solSum:
+                tmp = []
+                for i,v in enumerate(solution):
+                    if v>=0 and i>0:
+                        tmp.append('+'+str(v))
+                    else:
+                        tmp.append(str(v))
+                result.append(''.join(tmp))
+                return
             else:
-                hi=mid-1
-        return self.cities[lo][0]
+                return
+        solution.append(int(s[i]))
+        dfs(s,i+1,solution,solSum+solution[-1],target)
+        solution.pop()
+        solution.append(-int(s[i]))
+        dfs(s,i+1,solution,solSum+solution[-1],target)
+        solution.pop()
+        if i>0:
+            prev = solution.pop()
+            solution.append(int(str(prev)+s[i]))
+            dfs(s,i+1,solution,solSum-prev+solution[-1],target)
+            solution.pop()
+            solution.append(prev)
+    dfs(s,0,[],0,target)
+    for r in result:
+        print(f'{r} {eval(r)}')
+    return result
 
-s=Solution([["Seatle",500],["New York",900],["Los Angeles",400]])
-print(Counter([s.pickIndex() for x in range(10000)]))
+
+# print(findTarget('123',4))
+# print(findTarget('12345',10))
+# print(findTarget('12345',15))
+print(findTarget('12345',12345))
+print([findTarget('123456789',10)])

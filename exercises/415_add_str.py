@@ -23,9 +23,8 @@ class Solution:
 #variant: there are decimals
 # O(max(n,m)) space O1
 class Solution2:
-    def addString(self,num1,num2):
+    def addString(self,num1,num2,rem=0):
         i,j = len(num1)-1,len(num2)-1
-        rem = 0
         result = []
         while i>=0 or j>=0:
             res = rem
@@ -37,9 +36,7 @@ class Solution2:
                 j-=1
             result.append(chr(res%10+ord('0')))
             rem = res//10
-        if rem:
-            result.append(chr(rem+ord('0')))
-        return result
+        return result,rem
     
     def addStrings(self, num1: str, num2: str) -> str:
         tok1 = num1.split('.')
@@ -49,11 +46,15 @@ class Solution2:
         max_l = max(len(dec1),len(dec2))
         dec1 = dec1.ljust(max_l,'0')
         dec2 = dec2.ljust(max_l,'0')
-        result = self.addString(dec1,dec2)
+        result,rem = self.addString(dec1,dec2)
         if result:
             result.append('.')
-        result.extend(self.addString(tok1[0],tok2[0]))
+        res,rem = self.addString(tok1[0],tok2[0],rem)
+        result.extend(res)
+        if rem:
+            result.append(chr(rem+ord('0')))
         result.reverse()
+        print(result)
         return ''.join(result)
     
 s=Solution2()
@@ -62,3 +63,4 @@ assert s.addStrings('111.1','111.1') == '222.2'
 assert s.addStrings('111.1234','111.1') == '222.2234'
 assert s.addStrings('.1234','1.1000000') == '1.2234000'
 assert s.addStrings('.1234','1.') == '1.1234'
+assert s.addStrings('.9234','.1') == '1.0234'
