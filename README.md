@@ -195,7 +195,6 @@ print(heap[0])
 
 ## Binary search
 ```python
-
 def binary_search(arr, target):
     lo, hi = 0, len(arr) - 1
 
@@ -208,12 +207,12 @@ def binary_search(arr, target):
     return lo
 ```
 
-- `binary_search([1,2,3,4],5)` -> 4 (one past the last element)
-- `binary_search([1,2,3,4],0)` -> 0
-- `binary_search([1, 2, 6, 7],5)` -> 2
-- `binary_search([1, 2, 6, 7],3)` -> 2
-- `binary_search([1, 2, 6, 7],2)` -> 2
-- `binary_search([1, 2, 6, 7, 7, 7, 7, 8, 9, 10, 11],7)` -> 7
+- `binary_search([1,2,3,4],5)` -> 4 (bigger than largest, one past the last element)
+- `binary_search([1,2,3,4],0)` -> 0 (less than smallest, first element)
+- `binary_search([1, 2, 6, 7],5)` -> 2 (insertion index is element that is bigger)
+- `binary_search([1, 2, 6, 7],3)` -> 2 (insertion index is element that is bigger)
+- `binary_search([1, 2, 6, 7],2)` -> 2 (equals, insertion is next element not equal)
+- `binary_search([1, 2, 6, 7, 7, 7, 7, 8, 9, 10, 11],7)` -> 7 (equals, insertion is next element not equal)
 
 
 ## LRU Cache
